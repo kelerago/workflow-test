@@ -1,0 +1,7 @@
+{
+    "type": "yarn",
+    "source": [
+        "https://registry.npmjs.org"
+    ],
+    "version": "1.22.19"
+}
