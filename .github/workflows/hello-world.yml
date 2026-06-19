@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  hello_world:
+  python:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
@@ -14,3 +14,16 @@ jobs:
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: script
         run: python main.py
+
+  node:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Node JS
+        uses: actions/setup-node@4
+        with:
+          node-version: 22
+          cache: "npm"
+      - name: script
+        run: node main.js
